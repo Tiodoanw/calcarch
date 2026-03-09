@@ -1,7 +1,4 @@
-/* =========================================
-   VARIABLES GLOBALES
-   ========================================= */
-:root {
+root {
     --primary: #0f172a; 
     --secondary: #3b82f6; 
     --accent: #06b6d4;
@@ -241,3 +238,4 @@ h1 { color: var(--primary); margin-bottom: 25px; font-size: 2.5rem; font-weight:
     width: 100%; padding: 15px; margin-top: 20px; 
     border-radius: 10px; border: 2px solid #e2e8f0; font-size: 1.1rem; text-align: center;
 }
+
