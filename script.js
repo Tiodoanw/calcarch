@@ -1,4 +1,3 @@
-
 const baseDatos = [
     {
         titulo: "1. Continuidad en Estructuras",
@@ -331,4 +330,5 @@ function mostrarResultados() {
 window.onload = function() {
     cargarMenu();
     verificarNombre();
+
 };
