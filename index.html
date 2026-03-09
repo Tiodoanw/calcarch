@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Cálculo - CalcArch por Santiago_grup</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div id="modal-nombre" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">👋</div>
+            <h2>¡Bienvenido!</h2>
+            <p>Para personalizar tu experiencia, ¿cómo te llamas?</p>
+            <input type="text" id="input-nombre" placeholder="Escribe tu nombre aquí..." onkeypress="manejarEnter(event)">
+            <button class="btn" onclick="guardarNombre()" style="margin-top: 25px;">Entrar a la plataforma</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="brand-container">
+            <div class="logo-css">
+                <div class="viga-horizontal"></div>
+                <div class="cercha-diagonal-1"></div>
+                <div class="cercha-diagonal-2"></div>
+            </div>
+            <div class="brand-text">CalcArch</div>
+        </div>
+
+        <div class="menu-label">Navegación</div>
+        <div id="btn-inicio" class="menu-item active" onclick="mostrarBienvenida()">🏠 Inicio</div>
+        
+        <div class="menu-label" style="margin-top: 25px;">Temario de Estudio</div>
+        <div id="menu-items"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="container card">
+            
+            <div id="bienvenida-section">
+                <div style="font-size: 5rem; margin-bottom: 10px; animation: flotar 3s ease-in-out infinite;">🚀</div>
+                <h1 id="titulo-bienvenida" class="antigravity-title">¡Hola!</h1>
+                <p class="antigravity-subtitle">Bienvenido a tu Plataforma Interactiva de Cálculo</p>
+                <p class="bienvenida-desc">
+                    Esta plataforma fue creada especialmente para dominar el cálculo aplicado al diseño de estructuras y terrenos, combinando matemáticas exactas con escenarios de la vida real.
+                </p>
+                
+                <div class="explicacion-grid">
+                    <div class="explicacion-card">
+                        <div class="card-icon">📖</div>
+                        <h3>Teoría</h3>
+                        <p>Fórmulas de alta calidad visual y conceptos explicados directo al grano.</p>
+                    </div>
+                    <div class="explicacion-card">
+                        <div class="card-icon">▶️</div>
+                        <h3>Videos Clave</h3>
+                        <p>Material audiovisual para reforzar lo aprendido visualmente.</p>
+                    </div>
+                    <div class="explicacion-card">
+                        <div class="card-icon">🧠</div>
+                        <h3>Práctica</h3>
+                        <p>Simuladores interactivos de 5 preguntas por tema para probar lo aprendido.</p>
+                    </div>
+                </div>
+                
+                <button class="btn" style="margin-top: 40px; width: auto; padding: 16px 45px; font-size: 1.2rem;" onclick="mostrarTema(0)">
+                    Comenzar el Primer Módulo →
+                </button>
+            </div>
+
+            <div id="theory-section">
+                <h1 id="tema-titulo">Cargando...</h1>
+                
+                <div class="teoria-box" id="tema-teoria"></div>
+                
+                <div id="video-contenedor" class="video-box"></div>
+                
+                <div id="ejercicio-contenedor"></div>
+                
+                <button class="btn" onclick="iniciarQuiz()">🧠 Iniciar Práctica del Tema</button>
+            </div>
+
+            <div id="quiz-section">
+                <button class="btn-outline" onclick="volverATeoria()">← Volver a los Apuntes</button>
+                <div class="progreso-container"><div class="progreso-barra" id="quiz-barra"></div></div>
+                <p class="quiz-contador" id="quiz-contador"></p>
+                <div class="pregunta-titulo" id="pregunta-texto"></div>
+                <div id="opciones-contenedor"></div>
+                <button id="btn-siguiente" class="btn" onclick="siguientePregunta()">Siguiente Pregunta →</button>
+            </div>
+
+            <div class="footer-credits">
+                Desarrollado con por <span class="credito-nombre">Santiago_grup</span> 
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
