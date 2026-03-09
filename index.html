@@ -49,26 +49,26 @@
             <div id="bienvenida-section">
                 <div style="font-size: 5rem; margin-bottom: 10px; animation: flotar 3s ease-in-out infinite;">🚀</div>
                 <h1 id="titulo-bienvenida" class="antigravity-title">¡Hola!</h1>
-                <p class="antigravity-subtitle">Bienvenido a tu Plataforma Interactiva de Cálculo</p>
+                <p class="antigravity-subtitle">Plataforma Interactiva de Cálculo Estructural</p>
                 <p class="bienvenida-desc">
-                    Esta plataforma fue creada especialmente para dominar el cálculo aplicado al diseño de estructuras y terrenos, combinando matemáticas exactas con escenarios de la vida real.
+                    Domina el cálculo aplicado al diseño de estructuras y terrenos con escenarios de la vida real.
                 </p>
                 
                 <div class="explicacion-grid">
                     <div class="explicacion-card">
                         <div class="card-icon">📖</div>
-                        <h3>Teoría</h3>
-                        <p>Fórmulas de alta calidad visual y conceptos explicados directo al grano.</p>
+                        <h3>Teoría + Fórmulas</h3>
+                        <p>Modelos matemáticos aplicados a la arquitectura real.</p>
                     </div>
                     <div class="explicacion-card">
                         <div class="card-icon">▶️</div>
-                        <h3>Videos Clave</h3>
-                        <p>Material audiovisual para reforzar lo aprendido visualmente.</p>
+                        <h3>Videos</h3>
+                        <p>Visualización de conceptos complejos en video.</p>
                     </div>
                     <div class="explicacion-card">
                         <div class="card-icon">🧠</div>
-                        <h3>Práctica</h3>
-                        <p>Simuladores interactivos de 5 preguntas por tema para probar lo aprendido.</p>
+                        <h3>Doble Test</h3>
+                        <p>Dos niveles de práctica por cada módulo de estudio.</p>
                     </div>
                 </div>
                 
@@ -77,29 +77,40 @@
                 </button>
             </div>
 
-            <div id="theory-section">
+            <div id="theory-section" style="display:none;">
                 <h1 id="tema-titulo">Cargando...</h1>
                 
                 <div class="teoria-box" id="tema-teoria"></div>
+
+                <div class="formula-highlight-container" style="margin: 30px 0;">
+                    <h3 style="color: var(--secondary); margin-bottom: 15px;">🧮 Fórmulas Clave de Aplicación</h3>
+                    <div id="lista-formulas" class="formula-grid-display">
+                        </div>
+                </div>
                 
                 <div id="video-contenedor" class="video-box"></div>
                 
                 <div id="ejercicio-contenedor"></div>
                 
-                <button class="btn" onclick="iniciarQuiz()">🧠 Iniciar Práctica del Tema</button>
+                <div class="test-selector-ux" style="text-align: center; margin-top: 40px; border-top: 1px solid #eee; padding-top: 30px;">
+                    <h3 style="margin-bottom: 20px;">¿Listo para poner a prueba tu conocimiento?</h3>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <button class="btn" style="flex: 1; background: var(--secondary);" onclick="iniciarQuiz('A')">📝 Test Nivel A</button>
+                        <button class="btn" style="flex: 1; background: var(--accent);" onclick="iniciarQuiz('B')">🔥 Test Nivel B</button>
+                    </div>
+                </div>
             </div>
 
-            <div id="quiz-section">
+            <div id="quiz-section" style="display:none;">
                 <button class="btn-outline" onclick="volverATeoria()">← Volver a los Apuntes</button>
                 <div class="progreso-container"><div class="progreso-barra" id="quiz-barra"></div></div>
                 <p class="quiz-contador" id="quiz-contador"></p>
                 <div class="pregunta-titulo" id="pregunta-texto"></div>
                 <div id="opciones-contenedor"></div>
-                <button id="btn-siguiente" class="btn" onclick="siguientePregunta()">Siguiente Pregunta →</button>
             </div>
 
             <div class="footer-credits">
-                Desarrollado con por <span class="credito-nombre">Santiago_grup</span> 
+                Desarrollado por <span class="credito-nombre">Santiago_grup</span> 
             </div>
 
         </div>
